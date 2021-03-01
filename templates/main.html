@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Eco Update Synthesizer</title>
+        <meta name="description" content="Stay up-to-date with the latest ecological news!">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Reset the default css settings across all browsers -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+        <!-- Import a small css library (picnic.css) to handle most of the styling -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6.5.4/picnic.min.css">
+    </head>
+
+    <style>
+      /* I'm adding in some css of my own to further customize stuff */
+      h1 {
+        text-align: center;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .card {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      main {
+        padding-bottom: 25px;
+      }
+    </style>
+
+    <body>
+        <h1>Latest Environmental News:</h1>
+        <main>
+          {% for article_title, article_url in articles.items() %}
+            <div class="card">
+              <header>
+                <a href="{{ article_url }}" target="_blank">
+                  {{ article_title }}
+                </a>
+              </header>
+            </div>
+          {% endfor %}
+          </ul>
+        </main>
+    </body>
+</html>
